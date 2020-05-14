@@ -1,0 +1,21 @@
+# Elytra fly patch by IzDaBait https://www.spigotmc.org/members/izdabait.356376/
+
+# ~ Defaults ~ #
+# The plugin will check if the player is at or above this y value (Default: 128)
+ycheck: 128
+
+# This variable is to check if the player is in the nether. (Default: true)
+# This plugin is intended for nether roof flying patch but can also be in
+# 	the overworld. set the ycheck to 0 and this variable to false to limit
+# 	flying everywhere.
+onlynether: true
+
+# ~ Messages ~ #
+# Send feedback to the player when they are breaking the limit (Default: true)
+sendmessage: true
+# Send the velocity back to the player (Default: false) (Usually for debug purposes but it's here if you like it)
+# Will not trigger if sendmessage is false
+sendspeed: false
+
+# Here you can change the message it sends to the player once they break the limit 
+message: "You're going too fast with that!"

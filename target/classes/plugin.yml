@@ -1,0 +1,5 @@
+name: ElytraRoofPatch
+main: io.github.izdabait.rooflimiter.rooflimiter
+version: 2.0.4
+author: io.github.izdabait
+description: A plugin to patch people from flying too fast on the nether roof with an elytra.
