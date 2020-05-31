@@ -1,20 +1,57 @@
 # Elytra fly patch by IzDaBait https://www.spigotmc.org/members/izdabait.356376/
+# https://paypal.me/baitdonate
+# Join my server: 8b8t.xyz (Anarchy)
 
-# ~ Defaults ~ #
-# The plugin will check if the player is at or above this y value (Default: 128)
+# ~ Commands ~ #
+# /ep reload: Reload ElytraRoofPatch configuration. #
+# /ep help: Get ElytraRoofPatch's plugin page and version #
+
+
+# Completely disable Elytras everywhere (Default: false)
+disable: false
+
+# Completely disable Elytras on the roof (Default: false)
+disableroof: false
+
+# The plugin will check if the player is at or above this y value (Default: 128) Set to 0 to check everywhere
 ycheck: 128
 
 # This variable is to check if the player is in the nether. (Default: true)
 # This plugin is intended for nether roof flying patch but can also be in
 # 	the overworld. set the ycheck to 0 and this variable to false to limit
 # 	flying everywhere.
+#	> as of 2.1.3 overworld speed can also be set <
 onlynether: true
 
+# Speed Multiplier Double (Relaxed: 5.0, Default: 2.5, More strict: 2.0, Extremely Strict & Safe: 1.0) This is the maximum
+# 	velocity a player can go. It is not measured in blocks per second but blocks per movement packet. A Firework does
+#	not propel a user much more than 2.5, so it should be a safe value.
+# 	only applies ontop of the nether roof
+vdouble: 2.5
+# Speed Multiplier Double everywhere (under the roof, in the overworld etc. Keep higher than the above value.
+vdoubleeverywhere: 3.5
+
+# If you would like to teleport the player 1 block downwards, set this to true. 
+# 	this is a minor attempt to reduce people spamming the system. (Default: false)
+# 	please note this is still a testing feature that may also allow players to get
+#	under the bedrock.
+#	> Might not correctly function as of 2.1.2 <
+tp: false
+
+
 # ~ Messages ~ #
+
+# Message if flying is disabled on the roof
+disableroofmms: "Elytra flight is temporarily disabled above the nether roof!"
+
+# Message if flying is disabled everywhere
+disablemms: "Elytra flight is temporarily disabled!"
+
 # Send feedback to the player when they are breaking the limit (Default: true)
 sendmessage: true
+
 # Send the velocity back to the player (Default: false) (Usually for debug purposes but it's here if you like it)
-# Will not trigger if sendmessage is false
+# 	this will not trigger if sendmessage is false.
 sendspeed: false
 
 # Here you can change the message it sends to the player once they break the limit 
